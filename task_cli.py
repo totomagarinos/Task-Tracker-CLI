@@ -59,6 +59,26 @@ def update_task(id, description):
         print(f'Task with ID {id} not found')
 
 
+def mark_in_progress(id):
+    tasks = load_tasks()
+    now = datetime.now().isoformat()
+    updated = False
+
+    for task in tasks:
+        if task["id"] == int(id):
+            task["status"] = "In progress"
+            task["updated_at"] = now
+            updated = True
+            break
+    
+    if updated:
+        save_tasks(tasks)
+        print(f'Task {id} in progress')
+    else:
+        print(f'Task with ID {id} not found')
+
+
+
 if __name__ == "__main__":
     ensure_json_file_exists()
 
@@ -69,3 +89,6 @@ if __name__ == "__main__":
         id = sys.argv[2]
         description = sys.argv[3]
         update_task(id, description)
+    elif sys.argv[1] == "mark-in-progress":
+        id = sys.argv[2]
+        mark_in_progress(id)
