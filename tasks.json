@@ -2,58 +2,58 @@
   {
     "id": 1,
     "description": "Yamaha",
-    "status": "Done",
+    "status": "done",
     "created_at": "25/04/2025 19:35:01",
     "updated_at": "25/04/2025 19:36:33"
   },
   {
     "id": 2,
     "description": "Honda",
-    "status": "Done",
+    "status": "done",
     "created_at": "25/04/2025 19:35:08",
     "updated_at": "25/04/2025 19:36:38"
   },
   {
     "id": 3,
     "description": "BMW",
-    "status": "In progress",
+    "status": "done",
     "created_at": "25/04/2025 19:35:15",
-    "updated_at": "25/04/2025 19:36:50"
+    "updated_at": "28/04/2025 09:34:41"
   },
   {
     "id": 4,
     "description": "KTM",
-    "status": "Done",
+    "status": "done",
     "created_at": "25/04/2025 19:35:22",
     "updated_at": "25/04/2025 19:37:00"
   },
   {
     "id": 5,
     "description": "Benelli",
-    "status": "In progress",
+    "status": "done",
     "created_at": "25/04/2025 19:35:28",
-    "updated_at": "25/04/2025 19:37:07"
+    "updated_at": "28/04/2025 09:33:54"
   },
   {
     "id": 6,
     "description": "Kawasaki",
-    "status": "Done",
+    "status": "done",
     "created_at": "25/04/2025 19:35:35",
     "updated_at": "25/04/2025 19:37:13"
   },
   {
     "id": 7,
     "description": "Zanella",
-    "status": "todo",
+    "status": "in progress",
     "created_at": "25/04/2025 19:35:43",
-    "updated_at": "25/04/2025 19:35:43"
+    "updated_at": "28/04/2025 09:34:16"
   },
   {
     "id": 8,
     "description": "Motomel",
-    "status": "In progress",
+    "status": "done",
     "created_at": "25/04/2025 19:35:51",
-    "updated_at": "25/04/2025 19:37:27"
+    "updated_at": "28/04/2025 09:34:53"
   },
   {
     "id": 9,
