@@ -44,9 +44,9 @@
   {
     "id": 7,
     "description": "Zanella",
-    "status": "in progress",
+    "status": "done",
     "created_at": "25/04/2025 19:35:43",
-    "updated_at": "28/04/2025 09:34:16"
+    "updated_at": "30/04/2025 10:39:16"
   },
   {
     "id": 8,
@@ -58,8 +58,15 @@
   {
     "id": 9,
     "description": "Zontes",
-    "status": "todo",
+    "status": "done",
     "created_at": "25/04/2025 19:35:57",
-    "updated_at": "25/04/2025 19:35:57"
+    "updated_at": "30/04/2025 10:39:56"
+  },
+  {
+    "id": 10,
+    "description": "Imprimir apoya cascos",
+    "status": "todo",
+    "created_at": "30/04/2025 10:39:43",
+    "updated_at": "30/04/2025 10:39:43"
   }
 ]
