@@ -4,7 +4,6 @@ import argparse
 from datetime import datetime
 import json
 import os
-import sys
 
 # File to store tasks
 TASKS_FILE = "tasks.json"
@@ -110,6 +109,24 @@ def mark_done(id):
   else:
     print(f'Task with ID {id} not found')
 
+def mark_todo(id):
+  tasks = load_tasks()
+  now = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+  updated = False
+
+  for task in tasks:
+    if task["id"] == int(id):
+      task["status"] = "todo"
+      task["updated_at"] = now
+      updated = True
+      break
+  
+  if updated:
+    save_tasks(tasks)
+    print(f'Task {id} todo')
+  else:
+    print(f'Task with ID {id} not found')
+
 def print_tasks(tasks):
   if not tasks:
     print('No tasks found')
@@ -174,11 +191,17 @@ def main():
     default="all",
     help="Filter tasks")
   
-  # List done tasks
+  # Mark done
+  mark_done_parser = subparsers.add_parser("mark-done", help="Mark a task done")
+  mark_done_parser.add_argument("task_id", type=int, help="ID of the task to update")
 
-  # List todo tasks
+  # Mark in-progress
+  mark_in_progress_parser = subparsers.add_parser("mark-in-progress", help="Mark a task in progress")
+  mark_in_progress_parser.add_argument("task_id", type=int, help="ID of the task to update")
 
-  # List in progress tasks
+  # Mark todo
+  mark_todo_parser = subparsers.add_parser("mark-todo", help="Mark a task todo")
+  mark_todo_parser.add_argument("task_id", type=int, help="ID of the task to update")
 
   args = parser.parse_args()
 
@@ -197,6 +220,12 @@ def main():
       list_in_progress_tasks()
     elif args.filter == "todo":
       list_not_done_tasks()
+  elif args.command == "mark-done":
+    mark_done(args.task_id)
+  elif args.command == "mark-in-progress":
+    mark_in_progress(args.task_id)
+  elif args.command == "mark-todo":
+    mark_todo(args.task_id)
   else:
     parser.print_help()
 
