@@ -66,12 +66,12 @@ def delete_task(id):
       tasks.remove(task)
       save_tasks(tasks)
       print(f'Task {id} deleted')
-      return
   print(f'Task with ID {id} not found')
 
   # Reassign IDs to keep the sequential
   for i, task in enumerate(tasks, 1):
       task["id"] = i
+  save_tasks(tasks)
 
 def mark_in_progress(id):
   tasks = load_tasks()
