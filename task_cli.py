@@ -66,7 +66,9 @@ def delete_task(id):
       tasks.remove(task)
       save_tasks(tasks)
       print(f'Task {id} deleted')
-  print(f'Task with ID {id} not found')
+      break
+  else: 
+    print(f'Task with ID {id} not found')
 
   # Reassign IDs to keep the sequential
   for i, task in enumerate(tasks, 1):
